@@ -12,3 +12,10 @@ variable "pubkey_path" {
 variable "pvtkey_path" {
    type=string
 }
+
+resource "digitalocean_droplet" "db" {
+	name="tech_analysis_db"
+	image="ubuntu-20-04-x64"
+	size="s-2vcpu-4gb"
+	region="sgp1"
+}
